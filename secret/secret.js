@@ -1,0 +1,13 @@
+module.exports={
+  auth:{
+    user:'',
+    pass:''
+  },
+  facebook:{
+    clientID:'',
+    clientSecret:'',
+    profileFields:['email','displayName'],
+    callbackURL:'http://localhost:3000/auth/facebook/callback',
+    passReqToCallback:true
+  }
+}
