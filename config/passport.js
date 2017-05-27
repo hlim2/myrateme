@@ -72,7 +72,8 @@ passport.use(new FacebookStrategy(secret.facebook,(req,token,refreshToken,profil
         var newUser=new User();
         newUser.facebook=profile.id;
         newUser.fullname=profile.displayName;
-        newUser.email=profile._json.email;
+        //newUser.email=profile._json.email;
+        newUser.email=profile.id;
         newUser.tokens.push({token:token});
 
         newUser.save(function(err) {
